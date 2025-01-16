@@ -1,6 +1,6 @@
 TEST?=$$(go list ./... | grep -v 'vendor')
 HOSTNAME=hashicorp.com
-NAMESPACE=ekristen
+NAMESPACE=poulpatine
 NAME=pgp
 BINARY=terraform-provider-${NAME}
 VERSION=0.2.0
@@ -12,7 +12,7 @@ build:
 	go build -o ${BINARY}
 
 release:
-	goreleaser release --rm-dist --snapshot --skip-publish  --skip-sign
+	goreleaser release --snapshot --skip-publish  --skip-sign
 
 install: build
 	mkdir -p ~/.terraform.d/plugins/${HOSTNAME}/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}

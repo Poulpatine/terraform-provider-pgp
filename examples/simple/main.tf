@@ -2,7 +2,7 @@ terraform {
   required_providers {
     pgp = {
       version = "0.2.0"
-      source  = "hashicorp.com/ekristen/pgp"
+      source  = "hashicorp.com/poulpatine/pgp"
     }
   }
 }
